@@ -1,3 +1,2 @@
 # landing-page-template
-```Surge Link >>> https://hospitable-feather.surge.sh/index.html
-```
+Surge Link >>> https://hospitable-feather.surge.sh/index.html
