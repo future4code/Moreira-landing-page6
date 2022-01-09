@@ -12,14 +12,30 @@
 
 <body>
   <!-- <Header - Inicio1> -->
-  <header>
-    <nav class="Menu-Principal">
-      <a href="/index.html"><img class="icone" src="/img/Log4.png" alt="Logo-Empresa-Icone"></a>
-      <a href="/nossa-historia.html"style="text-decoration:none"><button class="btn-menu">Nossa história</button></a>
-      <a href="/index.html" style="text-decoration:none"><button class="btn-menu">Serviços</button></a>
-      <a href="/index.html" style="text-decoration:none"><button class="btn-menu">Login</button></a>
-    </nav>
-  </header>
+    <header>
+      <nav class="Menu-Principal">
+        <a href="/index.html"><img class="icone" src="/img/Log4.png" alt="Logo da Log4"></a>
+        <a href="/nossa-historia.html" style="text-decoration:none"><button class="btn-menu">História</button></a>
+        <div class="dropdown">
+          <button class="menu-pincipal-suspenso">Serviços</button>
+          <div class="dropdown-servicos">
+            <a href="#">Atendimento</a>
+            <a href="#">Abrangência</a>
+            <a href="#">Orçamentos</a>
+            <a href="#">Depoimentos</a>
+            <a href="#">FAQ</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="menu-pincipal-suspenso">Login</button>
+          <div class="dropdown-login">
+            <input type="email" placeholder="E-mail"></input>
+            <input type="password" placeholder="Senha"></input>
+            <button type="submit"> Entrar</button>
+          </div>
+        </div>
+      </nav>
+    </header>
   <!-- <Header - Fim> -->
 
   <!---------------------------------------------------------------------------------------------------------------------------------------->
