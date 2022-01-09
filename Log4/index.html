@@ -10,14 +10,29 @@
 </head>
 
 <body>
-  <!-- <Header - Inicio1> -->
+  <!-- <Header - Inicio> -->
   <header>
     <nav class="Menu-Principal">
-      <a href="/index.html"><img class="icone" src="/img/Log4.png" alt="Logo-Empresa-Icone"></a>
-      <a href="/nossa-historia.html"style="text-decoration:none"><button class="btn-menu">Nossa história</button></a>
-      <a href="/index.html" style="text-decoration:none"><button class="btn-menu">Rede atendimento</button></a>
-      <a href="/index.html" style="text-decoration:none"><button class="btn-menu">Serviços</button></a>
-      <a href="/index.html" style="text-decoration:none"><button class="btn-menu">Login</button></a>
+      <a href="/index.html"><img class="icone" src="/img/Log4.png" alt="Logo da Log4"></a>
+      <a href="/nossa-historia.html" style="text-decoration:none"><button class="btn-menu">História</button></a>
+      <div class="dropdown">
+        <button class="menu-pincipal-suspenso">Serviços</button>
+        <div class="dropdown-servicos">
+          <a href="#">Atendimento</a>
+          <a href="#">Abrangência</a>
+          <a href="#">Orçamentos</a>
+          <a href="#">Depoimentos</a>
+          <a href="#">FAQ</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="menu-pincipal-suspenso">Login</button>
+        <div class="dropdown-login">
+          <input type="email" placeholder="E-mail"></input>
+          <input type="password" placeholder="Senha"></input>
+          <button type="submit"> Entrar</button>
+        </div>
+      </div>
     </nav>
   </header>
   <!-- <Header - Fim> -->
@@ -31,7 +46,6 @@
         <p>Cansado de não receber suas encomendas em um tempo hábil?</p>
         <h1>LOG4: ENTREGAR SEM PARAR</h1>
       </div>
-
     </section>
 
     <section id="container-main2">
@@ -41,7 +55,7 @@
         e segurança. Potencialize a satisfação dos seus clientes por meio da nossa rede de atendimento
         presente em todos os estados brasileiros. Venha potencializar seus ganhos com quem entende de
         varejo.</p>
-      <img class="img-container-main2" src="img/Log4.png" alt="Logo-Log4">
+      <img class="img-container-main2" src="img/Log4.png" alt="Logo da Log4">
     </section>
 
     <section id="form-contato">
@@ -59,9 +73,9 @@
   <!-- footer inicio -->
   <footer class="redes-sociais">
     <ul class="lista-redesSociais">
-      <li><a href="/index.html" target="_blank"><img src="/img/face.png"></a></li>
-      <li><a href="/index.html" target="_blank"><img src="/img/insta.png"></a></li>
-      <li><a href="/index.html" target="_blank"><img src="./img/twitter.png"></a></li>
+      <li><a href="/index.html" target="_blank"><img src="/img/face.png" alt="Logo Facebook"></a></li>
+      <li><a href="/index.html" target="_blank"><img src="/img/insta.png" alt="Logo Instagram"></a></li>
+      <li><a href="/index.html" target="_blank"><img src="./img/twitter.png " alt="Logo Twitter"></a></li>
     </ul>
   </footer>
   <!-- footer fim -->
