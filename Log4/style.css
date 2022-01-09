@@ -18,20 +18,22 @@ header {
     max-height: 10%; /* Esta e a próxima linha estipulam valores máximos e mínimos em caso de zoom*/
     min-height: 10%;
     width: 100%;
-    white-space: pre-wrap;
-    overflow: hidden; /*Caso o zoom dado seja muito grande, o texto desaparece para não deformar o restante*/
+    /* white-space: pre-wrap; */
+    /* overflow: hidden; Caso o zoom dado seja muito grande, o texto desaparece para não deformar o restante */
 }
 
 .Menu-Principal {
     display: flex;
     width: 100vw;
+    max-width: 112vw;
+    max-height: 80vh;
     align-items: center;
     justify-content: space-around;
 }
 
 .icone {
-    min-width: 12vh;
-    max-width: 12vh;
+    min-width: 10vh;
+    max-width: 10vh;
 }
 
 .btn-menu{
@@ -63,6 +65,74 @@ header {
     position:relative;top:0 /*Posição relativa ao elemento pai*/
 }
 
+.menu-pincipal-suspenso{
+    z-index: 2;
+    background-color: inherit;
+    color: black;
+    font-size: 23px;
+    font-family: Roboto;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-servicos {
+    display: none;
+    background-color: #C23949;
+    font-size: 18px;
+    font-family: Roboto;
+    font-weight: bold;
+    text-align: center;
+    width: 121px;
+    margin-top: 205px;
+    border-radius: 5px;
+}
+
+.dropdown-login{
+    display: none;
+    font-size: 18px;
+    font-family: Roboto; 
+    font-weight: bold;
+    width: 95px;
+    margin-top: 125px;
+    border-radius: 5px;
+}
+
+.dropdown-servicos a, input, button {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+}
+
+.dropdown-login button{
+    background-color: #C23949;
+    font-weight: bold;
+    font-family: Roboto;
+    font-size: 18px;
+}
+
+.dropdown-login a, input, button{
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-servicos {
+    display: block;
+}
+
+.dropdown:hover .dropdown-login {
+    display: block;
+}
 
 /*                                      MAIN                       */
 
@@ -88,7 +158,7 @@ header {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     /* text-shadow: 1px 1px #333; */ /*Sombreia o texto conforme os parâmetros*/
-    font-size: 1.7em;
+    font-size: 1.4em;
     color: rgb(15, 1, 1);
     position: absolute;
     white-space: pre-wrap; /*Wrap quebra a linha, separa os elementos*/
@@ -97,7 +167,7 @@ header {
 
 #container-main2 {
     display: flex;
-    margin: 40px 0px 30px 40px;
+    margin: 100px 0px 100px 40px;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
@@ -107,27 +177,33 @@ header {
     margin-right: 40px;
     text-align: justify;
     font-family: Roboto;
-    font-size: 22px;
-    line-height: 250%;
+    font-size: 24px;
+    line-height: 50px;
 }
 
 .img-container-main2{
     border-radius: 50px 10px 50px; /*Arredonda os cantos da imagens: pode-se gerar muitos efeitos mudando os valores*/ 
-    height: 80vh;
-    width: 100vw;
+    width: 150vw;
+    min-width: 12vw;
+    max-width: 150vw;
+    min-height: 10vh;
+    max-height: 100vh;
 }
 
 .img-container-main2:hover{
     border-radius: 10px 50px 10px 50px;
-    height: 80vh;
-    width: 100vw;
+    width: 150vw;
+    min-width: 12vw;
+    max-width: 150vw;
+    min-height: 10vh;
+    max-height: 100vh;
     transition: all .2s ease-in-out; /*Estipula o tempo em que o efeito aconte, neste caso, de hover*/
 }
 
 #chamada-contato{
     margin-bottom: 5%;
     font-family: Roboto;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: bolder;
 }
 
@@ -215,6 +291,7 @@ form {
 
 footer{
     display: flex;
+    flex-direction: row;
     background-color: #C23949;
     max-height: 10%;
     min-height: 10%;
@@ -322,17 +399,282 @@ footer{
 
 
 
-
-
-
-
-
-
-
-
-
 /*                                      MOBILE BREAKPOINT                               */
 
-@media screen and (min-width:374px) and (max-height:668px) {
+@media screen and (max-width:375px) and (max-height:668px) {
     
+/*                    HEADER E MENUS                            */
+    header {
+        display: flex;
+        position:fixed; 
+        z-index: 1; 
+        background-color: #C23949;
+        max-height: 10%; 
+        min-height: 10%;
+        width: 100%;
+    }
+    
+    .Menu-Principal {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .icone {
+        min-width: 8vh;
+        max-width: 8vh;
+    }
+    
+    .btn-menu{
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        font-size: 22px;
+        font-family: Roboto; 
+        font-weight: bold;
+        background-color:inherit; 
+        width: 100%;
+        border: none; 
+    }
+        
+    .btn-menu:active{
+        border-radius: 20px; 
+        height: 5px;
+        width: 100%;
+        background-color: rgb(170, 165, 165);
+    }
+    
+    .btn-menu{
+        position:relative;top:0 
+    }
+
+    .dropdown-login a, input, button{
+        color: black;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+        width: 100px;
+    }
+
+/*                      MAIN                            */
+
+    main {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #container-main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 38vh;
+        justify-content: center;
+    }
+    
+    .text-containerMain{
+        display: flex;
+        width: 90%;
+        margin-left: 8px;
+        margin-top: 90%;
+        background-image: url(img/Imagen\ de\ Fundo\ -\ Man.jpg); 
+        background-size: 100%;
+        background:fixed;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        color: rgb(15, 1, 1);
+    } 
+
+    .text-containerMain p{
+        display: none;
+    }
+
+
+
+/*                      TEXTO DO CORPO DA PÀGINA                */
+    
+    #container-main2 {
+        display: flex;
+        margin: 100px 8px 0px 8px;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        width: 95%;
+    }
+    
+    .text-container-main2{
+        margin-right: 1px;
+        text-align: justify;
+        font-family: Roboto;
+        font-size: 20px;
+        line-height: 140%;
+    }
+    
+    .img-container-main2{
+        height: 10vh;
+        width: 20vw;
+        display: none;
+        
+    }
+
+/*                          CONTATO                         */
+    #chamada-contato{
+        margin: 10% 0px;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: bolder;
+        width: 90%;
+    }
+    
+    #form-contato {
+        display: flex;
+        width: 95vw;
+        margin: 30px 15px 8px 15px;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 80px;
+    }
+    
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    .nome-mail-contato{
+        display: flex;
+        margin-bottom: 20px;
+        position:relative;
+        width:80vw;
+        height:5vh;
+        border-width: 2px;
+        border-top: none; 
+        border-left: none;
+        border-right: none;
+        border-radius: 3px;
+        border-color: #C23949;
+        font: 18px Roboto;
+    }
+    
+    .Campo-msg{
+        display: flex;
+        margin: 25px 0 30px 0;
+        position:relative;
+        width:80vw;
+        height:30vh;
+        border-width: 2px;
+        border-radius: 3px;
+        border-color: #C23949;
+        font: 18px Roboto;
+    }
+        
+    .form-contact-button{
+        margin-top: 30px;
+    }
+    
+    #submit{
+        display: flex;
+        width: 20%;
+        justify-content: center;
+        font: 19px Roboto;
+        padding: 7px 15px;
+        margin-left: 235px;
+        cursor: pointer;
+        transition: background .3s;
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 10px;
+        border-color:#C23949;
+    }
+    
+    #submit:active{
+        color: #C23949;
+    }
+    
+/*                      FOOTER                      */
+
+    footer{
+        display: flex;
+        background-color: #C23949;
+        max-height: 10%;
+        min-height: 10%;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .lista-redesSociais{
+        display: flex;
+        list-style: none; 
+        height: 10vh;
+        align-items: center;
+    }
+    
+    .redes-sociais img{
+        display: flex;
+        margin: 0px 40px 0px 40px;
+        width: 10vw;
+        height: 10vw;
+    }
+
+/*                  PÁGINA HISTÓRIA                     */
+
+    .container-main-paginas{
+        display: flex;
+        width: 105vw;
+        height: 90vh;
+        margin-left: -35px;
+    }
+    
+    .container-main-paginas p{
+        margin-right: 0px;
+    }
+
+    .img-main1-paginas{
+        display: none;
+    }
+        
+    .text-containerMain-paginas{
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        width: 99vw;
+        font-family: Roboto;
+        font-size: 20px;
+        line-height: 150%;
+        margin-right: 0;
+    }
+    
+    .h1-main1-paginas{
+        margin-top: 25px;
+        text-align: center;
+    }
+    
+    .container2-main-paginas{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 70vh;
+        align-items: center;
+    }
+    
+    .img2-main1-paginas{
+        display: none;
+    }
+        
+    .text2-containerMain-paginas{
+        display: flex;
+        text-align: justify;
+        width: 97%;
+        font-family: Roboto;
+        font-size: 20px;
+        line-height: 150%;
+    }
+    
+    .p-container{
+        display: flex;
+        margin: 1px 4px 1px 4px;
+    }  
 }
