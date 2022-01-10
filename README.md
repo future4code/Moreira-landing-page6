@@ -1,27 +1,30 @@
 # Landing-page-template
 
+
 **PROJETO LOG4**
 
-A Log4 é uma empresa de uma grande varejista que, após liderar o mercado de móveis, cama, mesa e banho, resolveu entrar no mercado puro de logística para competir com empresas como Loggi e MadeiraMadeira. Seus dois principais produtos são (i) a distribuição rápida de itens pequenos via motoboys/ciclistas e (ii) a distribuição rápida de móveis ou itens de grande tamanho. Você precisa criar um site capaz de comunicar a tradição e confiança do grupo varejista, mas também se posicionar como uma nova solução de tecnologia que traz velocidade aos clientes. 
+<center>A Log4 é uma empresa de uma grande varejista que, após liderar o mercado de móveis, cama, mesa e banho, resolveu entrar no mercado puro de logística para competir com empresas como Loggi e MadeiraMadeira. Seus dois principais produtos são (i) a distribuição rápida de itens pequenos via motoboys/ciclistas e (ii) a distribuição rápida de móveis ou itens de grande tamanho. Você precisa criar um site capaz de comunicar a tradição e confiança do grupo varejista, mas também se posicionar como uma nova solução de tecnologia que traz velocidade aos clientes. </center>
 
 __________________________________________________________________________________________________________
 
 **Tecnologias utilizadas**:
 
-[HTML](https://html.spec.whatwg.org/multipage/)
-[CSS](https://www.w3.org/Style/CSS/Overview.en.html)
-[Surge](https://surge.sh/)
+[HTML](https://html.spec.whatwg.org/multipage/)\
+[CSS](https://www.w3.org/Style/CSS/Overview.en.html)\
+[Surge](https://surge.sh/)\
 [Visual Studio Code](https://code.visualstudio.com/docs/editor/vscode-web)
 
 **Sites e recursos**:
 [Flacitcon](https://www.flaticon.com/)
 
 
-_________________________________________________________________________________________________________
+__________________________________________________________________________________________________________
 
 **Desenvolvedores**:
 
-Diego Conte, Ewerton Francis e Jaime Epifanio.
+Diego Conte\
+Ewerton Francis\
+Jaime Epifanio
 
 **Site**
 
